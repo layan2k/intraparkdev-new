@@ -1,38 +1,38 @@
 
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 
 import { FaTasks, FaProjectDiagram, FaDollarSign, FaFileAlt, FaFile, FaUser, FaDownload, FaComments } from "react-icons/fa";
 
 function ClientPortal() {
-    const [clients, setClients] = useState([]);
-    const [error, setError] = useState(null);
-    const [loading, setLoading] = useState(true);
+    // const [clients, setClients] = useState([]);
+    // const [error, setError] = useState<string | null>(null);
+    // const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        async function fetchClients() {
-            try {
-                setLoading(true);
-                const response = await fetch("/api/list-clients", {
-                    method: "POST",
-                    body: JSON.stringify({ limit: 10, offset: 0 }),
-                });
+    // useEffect(() => {
+    //     async function fetchClients() {
+    //         try {
+    //             setLoading(true);
+    //             const response = await fetch("/api/list-clients", {
+    //                 method: "POST",
+    //                 body: JSON.stringify({ limit: 10, offset: 0 }),
+    //             });
 
-                if (!response.ok) {
-                    throw new Error(`Error: ${response.status}`);
-                }
+    //             if (!response.ok) {
+    //                 throw new Error(`Error: ${response.status}`);
+    //             }
 
-                const data = await response.json();
-                setClients(data);
-            } catch (err) {
-                console.error(err);
-                setError("Could not load client data");
-            } finally {
-                setLoading(false);
-            }
-        }
+    //             const data = await response.json();
+    //             setClients(data);
+    //         } catch (err) {
+    //             console.error(err);
+    //             setError("Could not load client data");
+    //         } finally {
+    //             setLoading(false);
+    //         }
+    //     }
 
-        fetchClients();
-    }, []);
+    //     fetchClients();
+    // }, []);
 
     // if (loading) {
     //     return (
@@ -51,7 +51,7 @@ function ClientPortal() {
     // }
 
     return (
-      <div className=" bg-gray-50 p-4 md:p-8 flex-grow mt-15">
+    <div className=" bg-gray-50 p-4 md:p-8 flex-grow mt-15">
             <div className="max-w-7xl mx-auto">
                 <h1 className="text-3xl font-roboto font-bold mb-8">
                     Client Dashboard

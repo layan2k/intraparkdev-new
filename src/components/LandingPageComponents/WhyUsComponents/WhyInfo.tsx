@@ -1,4 +1,4 @@
-import WhyUsItems from "../../../data/WhyUsItemS"
+import WhyUsItems from "../../../data/WhyUsItems"
 import WhyUsCard from "./WhyUsCard"
 
 
