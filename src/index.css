@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+* {
+  padding: auto;
+  margin: none;
+  box-sizing: border-box;
+}
+
+input {
+  outline: none;
+}
+
+textarea {
+  outline: none;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;/* Transparent background for track */
+}
+
+::-webkit-scrollbar-thumb {
+  background:  #2C3E50; /* Gradient thumb */ /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background:  #3498DB /* Hover effect */
+}
+
+* {
+  -webkit-user-select: none;
+  user-select: none;
+}
